@@ -2,10 +2,10 @@ provider "azurerm" {
   # The "feature" block is required for AzureRM provider 2.x. 
   # If you are using version 1.x, the "features" block is not allowed.
   version = "2.5.0"
-  subscription_id = "${env.TF_VAR_subscription_id}"
-  client_id       = "${env.TF_VAR_client_id}"
-  client_secret   = "${env.TF_VAR_client_secret}"
-  tenant_id       = "${env.TF_VAR_tenant_id}"
+  subscription_id = "${env.subscription_id}"
+  client_id       = "${env.client_id}"
+  client_secret   = "${env.client_secret}"
+  tenant_id       = "${env.tenant_id}"
   features {}
 }
 resource "azurerm_resource_group" "myterraformgroup" {
